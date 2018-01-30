@@ -1,11 +1,11 @@
 /* Title of the carb entry absorption time cell */
-"Absorption Time" = "Длительность усвоения";
+"Carbkit_Absorption_Time" = "Длительность усвоения";
 
 /* Carb entry section footer text explaining absorption time */
-"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Выберите более высокую длительность усвоения для обильной пищи или для пищи с белками и протеинами. Это единственное указание для алгоритма не нуждается в дополнительных уточнениях.";
+"Carbkit_Choose_long_long_exact" = "Выберите более высокую длительность усвоения для обильной пищи или для пищи с белками и протеинами. Это единственное указание для алгоритма не нуждается в дополнительных уточнениях.";
 
 /* Title of the carb entry date picker cell */
-"Date" = "Дата";
+"Carbkit_Date" = "Дата";
 
 /* Section title for fast absorbing food */
 "Fast" = "Быстрая";
