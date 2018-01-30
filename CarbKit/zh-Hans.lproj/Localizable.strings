@@ -1,11 +1,11 @@
 /* Title of the carb entry absorption time cell */
-"Absorption Time" = "吸收时间";
+"Carbkit_Absorption_Time" = "吸收时间";
 
 /* Carb entry section footer text explaining absorption time */
-"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "如果吃的肉比较多，或者脂肪和蛋白质比较多，需要改变食物的吸收时间.";
+"Carbkit_Choose_long_long_exact" = "如果吃的肉比较多，或者脂肪和蛋白质比较多，需要改变食物的吸收时间.";
 
 /* Title of the carb entry date picker cell */
-"Date" = "时间";
+"Carbkit_Date" = "时间";
 
 /* Section title for fast absorbing food */
 "Fast" = "快速";
