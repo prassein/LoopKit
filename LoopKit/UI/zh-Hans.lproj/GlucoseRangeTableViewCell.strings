@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "8CT-w7-vKA"; */
+"8CT-w7-vKA.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "max"; ObjectID = "Dw2-da-mzO"; */
+"Dw2-da-mzO.placeholder" = "最大";
+
+/* Class = "UILabel"; text = "–"; ObjectID = "Uqw-Z2-iOD"; */
+"Uqw-Z2-iOD.text" = "–";
+
+/* Class = "UITextField"; placeholder = "min"; ObjectID = "ZFq-4F-l9E"; */
+"ZFq-4F-l9E.placeholder" = "分";
+
+/* Class = "UILabel"; text = "U/hour"; ObjectID = "kZs-Yo-cQX"; */
+"kZs-Yo-cQX.text" = "U/小时";

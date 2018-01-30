@@ -1,5 +1,5 @@
 /* The title of the screen displaying a pump event */
-"Pump Event" = "Evento de microinfusadora";
+"Pump Event" = "泵历史事件";
 
 /* The default title to use when an entry has none */
 "Unknown" = "未知的";
