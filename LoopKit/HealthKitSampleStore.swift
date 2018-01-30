@@ -82,8 +82,8 @@ open class HealthKitSampleStore {
                     domain: HKErrorDomain,
                     code: HKError.errorAuthorizationDenied.rawValue,
                     userInfo: [
-                        NSLocalizedDescriptionKey: NSLocalizedString("com.loudnate.LoopKit.sharingDeniedErrorDescription", tableName: "LoopKit", value: "Authorization Denied", comment: "The error description describing when Health sharing was denied"),
-                        NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString("com.loudnate.LoopKit.sharingDeniedErrorRecoverySuggestion", tableName: "LoopKit", value: "Please re-enable sharing in Health", comment: "The error recovery suggestion when Health sharing was denied")
+                        NSLocalizedDescriptionKey: NSLocalizedString("com.loudnate.LoopKit.sharingDeniedErrorDescription", tableName: "LoopKit", value: "授权被拒绝", comment: "The error description describing when Health sharing was denied"),
+                        NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString("com.loudnate.LoopKit.sharingDeniedErrorRecoverySuggestion", tableName: "LoopKit", value: "在苹果健康APP里重新启用共享", comment: "The error recovery suggestion when Health sharing was denied")
                     ]
                 )
             }

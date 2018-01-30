@@ -594,8 +594,8 @@ public final class CarbStore: HealthKitSampleStore {
                 resultHandler(
                     false,
                     .unauthorizedError(
-                        description: NSLocalizedString("com.loudnate.CarbKit.deleteCarbEntryUnownedErrorDescription", tableName: "CarbKit", value: "Authorization Denied", comment: "The description of an error returned when attempting to delete a sample not shared by the current app"),
-                        recoverySuggestion: NSLocalizedString("com.loudnate.carbKit.sharingDeniedErrorRecoverySuggestion", tableName: "CarbKit", value: "This sample can be deleted from the Health app", comment: "The error recovery suggestion when attempting to delete a sample not shared by the current app")
+                        description: NSLocalizedString("com.loudnate.CarbKit.deleteCarbEntryUnownedErrorDescription", tableName: "CarbKit", value: "授权被拒绝", comment: "The description of an error returned when attempting to delete a sample not shared by the current app"),
+                        recoverySuggestion: NSLocalizedString("com.loudnate.carbKit.sharingDeniedErrorRecoverySuggestion", tableName: "CarbKit", value: "这个示例可以从苹果健康APP中删除", comment: "The error recovery suggestion when attempting to delete a sample not shared by the current app")
                     )
                 )
             }
@@ -603,8 +603,8 @@ public final class CarbStore: HealthKitSampleStore {
             resultHandler(
                 false,
                 .argumentError(
-                    description: NSLocalizedString("com.loudnate.CarbKit.deleteCarbEntryInvalid", tableName: "CarbKit", value: "Invalid Entry", comment: "The description of an error returned when attempting to delete a non-HealthKit sample"),
-                    recoverySuggestion: NSLocalizedString("com.loudnate.carbKit.sharingDeniedErrorRecoverySuggestion", tableName: "CarbKit", value: "This object is not saved in the Health database and therefore cannot be deleted", comment: "The error recovery suggestion when attempting to delete a non-HealthKit sample")
+                    description: NSLocalizedString("com.loudnate.CarbKit.deleteCarbEntryInvalid", tableName: "CarbKit", value: "不合规条目", comment: "The description of an error returned when attempting to delete a non-HealthKit sample"),
+                    recoverySuggestion: NSLocalizedString("com.loudnate.carbKit.sharingDeniedErrorRecoverySuggestion", tableName: "CarbKit", value: "这个对象没有保存在苹果健康数据库中因此不能被删除", comment: "The error recovery suggestion when attempting to delete a non-HealthKit sample")
                 )
             )
         }
