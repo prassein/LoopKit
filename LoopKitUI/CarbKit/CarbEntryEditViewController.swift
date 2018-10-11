@@ -27,7 +27,7 @@ public final class CarbEntryEditViewController: UITableViewController {
 
     public var preferredUnit = HKUnit.gram()
 
-    public var maxQuantity = HKQuantity(unit: .gram(), doubleValue: 250)
+    public var maxQuantity = HKQuantity(unit: .gram(), doubleValue: 199)
 
     /// Entry configuration values. Must be set before presenting.
     public var absorptionTimePickerInterval = TimeInterval(minutes: 30)
