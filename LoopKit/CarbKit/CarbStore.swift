@@ -852,7 +852,7 @@ extension CarbStore {
                 "\tStoredCarbEntry(sampleUUID, syncIdentifier, syncVersion, startDate, quantity, foodType, absorptionTime, createdByCurrentApp, externalID, isUploaded)"
             ]
 
-            report.append(self.getCachedCarbEntries().map({
+            let entriesMap = self.getCachedCarbEntries().map({
                 return [
                     "\t",
                     String(describing: $0.sampleUUID),
@@ -865,8 +865,11 @@ extension CarbStore {
                     String(describing: $0.createdByCurrentApp),
                     $0.externalID ?? "",
                     String(describing: $0.isUploaded),
-                ].joined(separator: ", ")
-            }).joined(separator: "\n"))
+                    ].joined(separator: ", ")
+            })
+            
+            let reportContent = entriesMap.joined(separator: "\n")
+            report.append(reportContent)
             report.append("]")
             report.append("")
 
