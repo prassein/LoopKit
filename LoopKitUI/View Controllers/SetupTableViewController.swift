@@ -13,10 +13,6 @@ open class SetupTableViewController: UITableViewController {
         return navigationController as? PumpManagerSetupViewController
     }
 
-    open var cgmSetupViewController: CGMManagerSetupViewController? {
-        return navigationController as? CGMManagerSetupViewController
-    }
-
     private(set) open lazy var footerView = SetupTableFooterView(frame: .zero)
 
     private var lastContentHeight: CGFloat = 0
@@ -37,7 +33,7 @@ open class SetupTableViewController: UITableViewController {
             lastContentHeight = tableView.contentSize.height
             tableView.tableFooterView = nil
 
-            var footerSize = footerView.systemLayoutSizeFitting(CGSize(width: tableView.frame.size.width, height: UIView.layoutFittingCompressedSize.height))
+            var footerSize = footerView.systemLayoutSizeFitting(CGSize(width: tableView.frame.size.width, height: UILayoutFittingCompressedSize.height))
             let visibleHeight = tableView.bounds.size.height - (tableView.adjustedContentInset.top + tableView.adjustedContentInset.bottom)
             let footerPadding = max(footerSize.height, visibleHeight - tableView.contentSize.height)
 
@@ -49,7 +45,6 @@ open class SetupTableViewController: UITableViewController {
 
     @IBAction open func cancelButtonPressed(_: Any) {
         setupViewController?.cancelSetup()
-        cgmSetupViewController?.cancelSetup()
     }
 
     @IBAction open func continueButtonPressed(_ sender: Any) {
@@ -61,11 +56,11 @@ open class SetupTableViewController: UITableViewController {
     // MARK: - UITableViewDelegate
 
     open override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        return UITableViewAutomaticDimension
     }
 
     open override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        return UITableViewAutomaticDimension
     }
 
 }
@@ -95,9 +90,9 @@ open class SetupTableFooterView: UIView {
             primaryButton.trailingAnchor.constraint(equalTo: buttonStack.trailingAnchor),
 
             buttonStack.topAnchor.constraint(greaterThanOrEqualTo: layoutMarginsGuide.topAnchor),
-            buttonStack.leadingAnchor.constraint(equalToSystemSpacingAfter: layoutMarginsGuide.leadingAnchor, multiplier: 1),
-            layoutMarginsGuide.trailingAnchor.constraint(equalToSystemSpacingAfter: buttonStack.trailingAnchor, multiplier: 1),
-            safeAreaLayoutGuide.bottomAnchor.constraint(equalToSystemSpacingBelow: buttonStack.bottomAnchor, multiplier: 2),
+            buttonStack.leadingAnchor.constraintEqualToSystemSpacingAfter(layoutMarginsGuide.leadingAnchor, multiplier: 1),
+            layoutMarginsGuide.trailingAnchor.constraintEqualToSystemSpacingAfter(buttonStack.trailingAnchor, multiplier: 1),
+            safeAreaLayoutGuide.bottomAnchor.constraintEqualToSystemSpacingBelow(buttonStack.bottomAnchor, multiplier: 2),
         ])
     }
 

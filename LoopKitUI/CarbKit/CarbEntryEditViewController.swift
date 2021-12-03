@@ -27,7 +27,7 @@ public final class CarbEntryEditViewController: UITableViewController {
 
     public var preferredUnit = HKUnit.gram()
 
-    public var maxQuantity = HKQuantity(unit: .gram(), doubleValue: 250)
+    public var maxQuantity = HKQuantity(unit: .gram(), doubleValue: 199)
 
     /// Entry configuration values. Must be set before presenting.
     public var absorptionTimePickerInterval = TimeInterval(minutes: 30)
@@ -89,7 +89,7 @@ public final class CarbEntryEditViewController: UITableViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.rowHeight = UITableView.automaticDimension
+        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
         tableView.register(DateAndDurationTableViewCell.nib(), forCellReuseIdentifier: DateAndDurationTableViewCell.className)
 
@@ -147,7 +147,7 @@ public final class CarbEntryEditViewController: UITableViewController {
             cell.titleLabel.text = LocalizedString("Date", comment: "Title of the carb entry date picker cell")
             cell.datePicker.isEnabled = isSampleEditable
             cell.datePicker.datePickerMode = .dateAndTime
-            cell.datePicker.maximumDate = Date(timeIntervalSinceNow: maximumDateFutureInterval)
+            cell.datePicker.maximumDate = Date() + maximumDateFutureInterval
             cell.datePicker.minuteInterval = 1
             cell.date = date
             cell.delegate = self
@@ -231,23 +231,6 @@ public final class CarbEntryEditViewController: UITableViewController {
     }
 
     // MARK: - Navigation
-
-    public override func restoreUserActivityState(_ activity: NSUserActivity) {
-        if let entry = activity.newCarbEntry {
-            quantity = entry.quantity
-            date = entry.startDate
-
-            if let foodType = entry.foodType {
-                self.foodType = foodType
-                usesCustomFoodType = true
-            }
-
-            if let absorptionTime = entry.absorptionTime {
-                self.absorptionTime = absorptionTime
-                absorptionTimeWasEdited = true
-            }
-        }
-    }
 
     public override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         self.tableView.endEditing(true)

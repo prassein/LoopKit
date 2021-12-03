@@ -43,28 +43,13 @@ public class HealthKitSampleStore {
     /// For unit testing only.
     internal var testQueryStore: HKSampleQueryTestable?
 
-    /// Allows for controlling uses of the system date in unit testing
-    internal var test_currentDate: Date?
-
-    internal func currentDate(timeIntervalSinceNow: TimeInterval = 0) -> Date {
-        let date = test_currentDate ?? Date()
-        return date.addingTimeInterval(timeIntervalSinceNow)
-    }
-
     private let log: OSLog
 
-    public init(
-        healthStore: HKHealthStore,
-        type: HKSampleType,
-        observationStart: Date,
-        observationEnabled: Bool,
-        test_currentDate: Date? = nil
-    ) {
+    public init(healthStore: HKHealthStore, type: HKSampleType, observationStart: Date, observationEnabled: Bool) {
         self.healthStore = healthStore
         self.sampleType = type
         self.observationStart = observationStart
         self.observationEnabled = observationEnabled
-        self.test_currentDate = test_currentDate
 
         self.log = OSLog(category: String(describing: Swift.type(of: self)))
 
