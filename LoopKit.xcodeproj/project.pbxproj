@@ -2285,6 +2285,7 @@
 		43D8FDE31C728FDF0073BE78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = T4JY56P443;
 				INFOPLIST_FILE = LoopKitTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2296,6 +2297,7 @@
 		43D8FDE41C728FDF0073BE78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = T4JY56P443;
 				INFOPLIST_FILE = LoopKitTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
