@@ -112,7 +112,7 @@ class DatePickerTableViewCell: UITableViewCell {
         switch datePicker.datePickerMode {
         case .countDownTimer:
             dateLabel.text = durationFormatter.string(from: duration)
-        case .date, .dateAndTime, .time:
+        case .date, .dateAndTime, .time, .yearAndMonth:
             dateLabel.text = DateFormatter.localizedString(from: date, dateStyle: .short, timeStyle: .short)
         }
     }
