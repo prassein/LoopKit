@@ -18,9 +18,9 @@ public protocol TextFieldTableViewCellDelegate: class {
 
 open class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
 
-    @IBOutlet weak var unitLabel: UILabel?
+    @IBOutlet open weak var unitLabel: UILabel?
 
-    @IBOutlet weak var textField: UITextField! {
+    @IBOutlet open weak var textField: UITextField! {
         didSet {
             textField.delegate = self
         }
@@ -52,15 +52,15 @@ open class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
         contentView.layoutMargins.right = separatorInset.left
     }
     
-    weak var delegate: TextFieldTableViewCellDelegate?
+    weak open var delegate: TextFieldTableViewCellDelegate?
     
     // MARK: - UITextFieldDelegate
     
-    public func textFieldDidBeginEditing(_ textField: UITextField) {
+    open func textFieldDidBeginEditing(_ textField: UITextField) {
         delegate?.textFieldTableViewCellDidBeginEditing(self)
     }
     
-    public func textFieldDidEndEditing(_ textField: UITextField) {
+    open func textFieldDidEndEditing(_ textField: UITextField) {
         delegate?.textFieldTableViewCellDidEndEditing(self)
     }
 }
