@@ -42,7 +42,7 @@ open class TextFieldTableViewController: UITableViewController, UITextFieldDeleg
         self.init(style: .grouped)
     }
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.cellLayoutMarginsFollowReadableWidth = true
@@ -57,11 +57,11 @@ open class TextFieldTableViewController: UITableViewController, UITextFieldDeleg
 
     // MARK: - UITableViewDataSource
 
-    public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    open override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
 
-    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.className, for: indexPath) as! TextFieldTableViewCell
 
         textField = cell.textField
@@ -75,7 +75,7 @@ open class TextFieldTableViewController: UITableViewController, UITextFieldDeleg
         return cell
     }
 
-    public override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    open override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return contextHelp
     }
 
