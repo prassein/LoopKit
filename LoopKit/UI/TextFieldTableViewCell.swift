@@ -16,7 +16,7 @@ public protocol TextFieldTableViewCellDelegate: class {
 }
 
 
-public class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
+open class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var unitLabel: UILabel?
 
