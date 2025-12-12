@@ -23,7 +23,7 @@ open class HealthKitSampleStore {
     }
 
     /// All the sample types we need permission to share
-    public var shareTypes: Set<HKSampleType> {
+    open var shareTypes: Set<HKSampleType> {
         return Set()
     }
 
@@ -69,7 +69,7 @@ open class HealthKitSampleStore {
         - success: Whether the authorization to share was successful
         - error:   An error object explaining why the authorization was unsuccessful
      */
-    public func authorize(_ completion: @escaping (_ success: Bool, _ error: Error?) -> Void) {
+    open func authorize(_ completion: @escaping (_ success: Bool, _ error: Error?) -> Void) {
         let parentHandler = completion
 
         healthStore.requestAuthorization(toShare: shareTypes, read: readTypes, completion: { (completed, error) -> Void in
