@@ -136,12 +136,12 @@ public final class DoseStore {
     }
 
     /// All the sample types we need permission to read
-    open var readTypes: Set<HKSampleType> {
+    public var readTypes: Set<HKSampleType> {
         return _insulinDeliveryStore?.readTypes ?? Set()
     }
 
     /// All the sample types we need permission to share
-    open var shareTypes: Set<HKSampleType> {
+    public var shareTypes: Set<HKSampleType> {
         return _insulinDeliveryStore?.shareTypes ?? Set()
     }
 
