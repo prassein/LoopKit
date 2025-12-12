@@ -257,7 +257,7 @@ public final class CarbEntryTableViewController: UITableViewController {
         return carbEntries[indexPath.row].createdByCurrentApp
     }
 
-    public override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    public override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete, case .display = state, let carbStore = carbStore {
             let entry = carbEntries.remove(at: indexPath.row)
             carbStore.deleteCarbEntry(entry, resultHandler: { (success, error) -> Void in

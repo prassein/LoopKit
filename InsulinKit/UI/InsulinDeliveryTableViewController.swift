@@ -337,7 +337,7 @@ public final class InsulinDeliveryTableViewController: UITableViewController {
         return true
     }
 
-    public override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    public override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete, case .display = state {
             switch values {
             case .reservoir(let reservoirValues):

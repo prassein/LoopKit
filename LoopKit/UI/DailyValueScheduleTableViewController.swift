@@ -168,7 +168,7 @@ public class DailyValueScheduleTableViewController: UITableViewController {
         fatalError("Subclasses must override __FUNCTION__")
     }
 
-    public override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    public override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Updates the table view state. Subclasses should update their data model before calling super
 
