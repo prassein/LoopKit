@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import LoopKit
+
 
 class DecimalTextFieldTableViewCell: TextFieldTableViewCell {
 
