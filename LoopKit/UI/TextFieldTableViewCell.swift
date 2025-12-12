@@ -56,11 +56,11 @@ public class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     // MARK: - UITextFieldDelegate
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
         delegate?.textFieldTableViewCellDidBeginEditing(self)
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
         delegate?.textFieldTableViewCellDidEndEditing(self)
     }
 }
