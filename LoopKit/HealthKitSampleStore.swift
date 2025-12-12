@@ -18,7 +18,7 @@ extension Notification.Name {
 open class HealthKitSampleStore {
 
     /// All the sample types we need permission to read
-    public var readTypes: Set<HKSampleType> {
+    open var readTypes: Set<HKSampleType> {
         return Set()
     }
 

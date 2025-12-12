@@ -259,14 +259,14 @@ public final class CarbEntryEditViewController: UITableViewController {
 
 
 extension CarbEntryEditViewController: TextFieldTableViewCellDelegate {
-    func textFieldTableViewCellDidBeginEditing(_ cell: TextFieldTableViewCell) {
+    public func textFieldTableViewCellDidBeginEditing(_ cell: TextFieldTableViewCell) {
         // Collapse any date picker cells to save space
         tableView.beginUpdates()
         hideDatePickerCells()
         tableView.endUpdates()
     }
 
-    func textFieldTableViewCellDidEndEditing(_ cell: TextFieldTableViewCell) {
+    public func textFieldTableViewCellDidEndEditing(_ cell: TextFieldTableViewCell) {
         guard let row = tableView.indexPath(for: cell)?.row else { return }
 
         switch Row(rawValue: row) {
