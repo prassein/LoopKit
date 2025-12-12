@@ -96,7 +96,7 @@ public final class InsulinDeliveryTableViewController: UITableViewController {
         )
         updateTimer = timer
 
-        RunLoop.current.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
+        RunLoop.current.add(timer, forMode: RunLoop.Mode.default)
     }
 
     public override func viewWillDisappear(_ animated: Bool) {
