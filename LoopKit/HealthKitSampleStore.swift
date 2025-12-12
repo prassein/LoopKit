@@ -18,12 +18,12 @@ extension Notification.Name {
 open class HealthKitSampleStore {
 
     /// All the sample types we need permission to read
-    open var readTypes: Set<HKSampleType> {
+    public var readTypes: Set<HKSampleType> {
         return Set()
     }
 
     /// All the sample types we need permission to share
-    open var shareTypes: Set<HKSampleType> {
+    public var shareTypes: Set<HKSampleType> {
         return Set()
     }
 
@@ -69,7 +69,7 @@ open class HealthKitSampleStore {
         - success: Whether the authorization to share was successful
         - error:   An error object explaining why the authorization was unsuccessful
      */
-    open func authorize(_ completion: @escaping (_ success: Bool, _ error: Error?) -> Void) {
+    public func authorize(_ completion: @escaping (_ success: Bool, _ error: Error?) -> Void) {
         let parentHandler = completion
 
         healthStore.requestAuthorization(toShare: shareTypes, read: readTypes, completion: { (completed, error) -> Void in

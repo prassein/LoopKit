@@ -36,20 +36,20 @@ open class TextFieldTableViewController: UITableViewController, UITextFieldDeleg
 
     public var keyboardType = UIKeyboardType.default
 
-    open weak var delegate: TextFieldTableViewControllerDelegate?
+    public weak var delegate: TextFieldTableViewControllerDelegate?
 
     public convenience init() {
         self.init(style: .grouped)
     }
 
-    open override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.cellLayoutMarginsFollowReadableWidth = true
         tableView.register(TextFieldTableViewCell.nib(), forCellReuseIdentifier: TextFieldTableViewCell.className)
     }
 
-    open override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         textField?.becomeFirstResponder()
@@ -57,11 +57,11 @@ open class TextFieldTableViewController: UITableViewController, UITextFieldDeleg
 
     // MARK: - UITableViewDataSource
 
-    open override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
 
-    open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.className, for: indexPath) as! TextFieldTableViewCell
 
         textField = cell.textField
@@ -75,19 +75,19 @@ open class TextFieldTableViewController: UITableViewController, UITextFieldDeleg
         return cell
     }
 
-    open override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    public override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return contextHelp
     }
 
     // MARK: - UITextFieldDelegate
 
-    open func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+    public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         value = textField.text
 
         return true
     }
 
-    open func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         value = textField.text
 
         textField.delegate = nil
