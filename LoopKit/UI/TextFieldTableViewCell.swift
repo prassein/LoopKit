@@ -9,14 +9,14 @@
 import UIKit
 
 
-protocol TextFieldTableViewCellDelegate: class {
+public protocol TextFieldTableViewCellDelegate: class {
     func textFieldTableViewCellDidBeginEditing(_ cell: TextFieldTableViewCell)
     
     func textFieldTableViewCellDidEndEditing(_ cell: TextFieldTableViewCell)
 }
 
 
-class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
+public class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var unitLabel: UILabel?
 
@@ -26,14 +26,14 @@ class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
         }
     }
 
-    override func prepareForReuse() {
+    public override func prepareForReuse() {
         super.prepareForReuse()
 
         textField.delegate = nil
         unitLabel?.text = nil
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    public override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: true)
         
         if selected {
@@ -45,7 +45,7 @@ class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
         }
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         
         contentView.layoutMargins.left = separatorInset.left
